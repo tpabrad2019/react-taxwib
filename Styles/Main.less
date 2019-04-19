@@ -1,0 +1,84 @@
+/*
+
+CODETEST - Brad Eichen
+
+Main.less
+
+*/
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+// styling for each card image, creating a circular mask over each picture
+.img-cover {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 4px white solid;
+}
+
+//main cardpage using css grid for the layout
+.cardpage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.card {
+    width: 250px;
+    border: 1px white solid;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px 0px rgba(230,230,230,1);
+    margin: 10px;
+}
+
+.tophalf {
+    background-color: #416DFF;
+    border-radius: 4px 4px 0 0;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    justify-items: center;
+    > div:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    > div:nth-child(1) {
+        img {
+            height: 20px;
+            width: 20px;
+            margin: 5px 0 0 5px;
+        }
+    }
+}
+.bottomhalf {
+    margin-top: 40px;
+    height: 175px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-template-rows: repeat(3, 25px);
+    color: #858585;
+}
+.tools {
+    border: 1px white solid;
+    box-shadow: 4px 4px 4px 0px rgba(230,230,230,1);
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    > div:last-child {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        > div {
+            display: grid;
+            grid-template-columns: repeat(4, 110px);
+            > div {
+                span {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
